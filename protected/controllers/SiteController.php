@@ -7,7 +7,7 @@ class SiteController extends Controller
 	 */
 	public function actions()
 	{
-		return array(
+		/*return array(
 			// captcha action renders the CAPTCHA image displayed on the contact page
 			'captcha'=>array(
 				'class'=>'CCaptchaAction',
@@ -18,7 +18,18 @@ class SiteController extends Controller
 			'page'=>array(
 				'class'=>'CViewAction',
 			),
-		);
+		);*/
+		
+		return array(  
+        // captcha action renders the CAPTCHA image displayed on the contact page  
+        'captcha'=>array(  
+            'class'=>'CCaptchaAction',  
+            'backColor'=>0xf4f4f4,  
+            'padding'=>0,  
+            'height'=>30,  
+            'maxLength'=>4,  
+        ),  
+        );  
 	}
 
 	/**

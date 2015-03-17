@@ -42,6 +42,9 @@
 	<div class="row">
 		<?php echo $form->textField($model,'captcha',array('class'=>'captcha','placeholder'=>'请输入验证码!')); ?>
 		<!--<?php echo $form->error($model,'captcha'); ?>-->
+		<?php $this->widget('CCaptcha'); ?> 
+		<?php echo CHtml::activeTextField($model,'captcha',array('tabindex'=>1)); ?>
+		<img src="" alt=""> 
 	</div>
 	
 	<div class="row ">
