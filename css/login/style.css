@@ -16,7 +16,7 @@ body {
 }
 
 .page-container {
-	width:300px;
+	width:350px;
 	height:auto;
     margin: 120px auto 0 auto;
 }
@@ -29,7 +29,7 @@ h1 {
 
 form {
     position: relative;
-    width: 300px;
+    width: 350px;
     margin: 15px auto 0 auto;
     text-align: center;
 }
@@ -76,10 +76,10 @@ input:focus {
         0 2px 7px 0 rgba(0,0,0,.2);
 }
 
-button {
+.submit {
     cursor: pointer;
-    width: 300px;
-    height: 44px;
+    width: 345px;
+    height: 40px;
     margin-top: 25px;
     padding: 0;
     background: #ef4300;
@@ -133,39 +133,11 @@ button:active {
     border: 0px solid #ef4300;
 }
 
-.error {
-    display: none;
-    position: absolute;
-    top: 27px;
-    right: -55px;
-    width: 40px;
-    height: 40px;
-    background: #2d2d2d; /* browsers that don't support rgba */
-    background: rgba(45,45,45,.25);
-    -moz-border-radius: 8px;
-    -webkit-border-radius: 8px;
-    border-radius: 8px;
-}
-
-.error span {
-    display: inline-block;
-    margin-left: 2px;
-    font-size: 40px;
-    font-weight: 700;
-    line-height: 40px;
-    text-shadow: 0 1px 2px rgba(0,0,0,.1);
-    -o-transform: rotate(45deg);
-    -moz-transform: rotate(45deg);
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-
-}
-
 .connect {
     width: 305px;
     margin: 35px auto 0 auto;
-    font-size: 18px;
-    font-weight: 700;
+    font-size: 16px;
+    font-weight: 500;
     text-shadow: 0 1px 3px rgba(0,0,0,.2);
 }
 
@@ -179,36 +151,30 @@ button:active {
     -webkit-transition: all .2s;
     -ms-transition: all .2s;
 }
+.errorMessage{
+	text-align:left;
+	margin-left:5px;
+	color:#F04F10;
+}
 
-.submit_button{
-	cursor: pointer;
-    width: 330px;
-    height: 44px;
-    margin-top: 25px;
-    padding: 0;
-    background: #ef4300;
-    -moz-border-radius: 6px;
-    -webkit-border-radius: 6px;
-    border-radius: 6px;
-    border: 1px solid #ff730e;
-    -moz-box-shadow:
-        0 15px 30px 0 rgba(255,255,255,.25) inset,
-        0 2px 7px 0 rgba(0,0,0,.2);
-    -webkit-box-shadow:
-        0 15px 30px 0 rgba(255,255,255,.25) inset,
-        0 2px 7px 0 rgba(0,0,0,.2);
-    box-shadow:
-        0 15px 30px 0 rgba(255,255,255,.25) inset,
-        0 2px 7px 0 rgba(0,0,0,.2);
-    font-family: 'PT Sans', Helvetica, Arial, sans-serif;
-    font-size: 14px;
-    font-weight: 700;
-    color: #fff;
-    text-shadow: 0 1px 2px rgba(0,0,0,.1);
-    -o-transition: all .2s;
-    -moz-transition: all .2s;
-    -webkit-transition: all .2s;
-    -ms-transition: all .2s;
+/*验证码样式*/
+.captcha{
+	margin-top:20px;
+}
+
+.captcha_1{
+	width:345px;
+	height:60px;
+	margin-left:-5px;
+}
+
+
+.captcha_err{
+	text-align:left;
+	margin:-5px auto auto 5px;
+}
+.password_ipnt{
+	margin:7px auto auto -1px;
 }
 
 .connect a.facebook { background: url(../img/facebook.png) center center no-repeat; }
@@ -219,7 +185,7 @@ button:active {
 /*－－－增加部份的CSS－－－*/
 form,input,button{font-family:Microsoft YaHei,Segoe UI,Tahoma,Arial,Verdana,sans-serif; text-decoration:none; width:100%;}
 button.submit_button{ font-size:24px; letter-spacing:15px;}
-input.captcha{ width:130px; float:left;}
+input.Captcha{ width:150px; float:left;margin:6px;}
 
 
 

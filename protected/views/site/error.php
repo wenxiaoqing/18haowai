@@ -1,15 +1,8 @@
-<?php
-/* @var $this SiteController */
-/* @var $error array */
+<div style="text-align:center;">
+<?php 
+	if($code=='404'){
+		echo CHtml::image('/images/error/error404.png','',array('width'=>'50%','height'=>'75%'));
+	}
 
-$this->pageTitle=Yii::app()->name . ' - Error';
-$this->breadcrumbs=array(
-	'Error',
-);
 ?>
-
-<h2>Error <?php echo $code; ?></h2>
-
-<div class="error">
-<?php echo CHtml::encode($message); ?>
 </div>

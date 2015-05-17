@@ -3897,7 +3897,7 @@ class CController extends CBaseController
 		else
 			echo $text;
 	}
-	public function renderPartial($view,$data=null,$return=false,$processOutput=false)
+	public function renderPartial($view,$data=null,$return=false,$processOutput=true)
 	{
 		if(($viewFile=$this->getViewFile($view))!==false)
 		{

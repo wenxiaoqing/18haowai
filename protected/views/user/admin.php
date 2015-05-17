@@ -1,3 +1,4 @@
+
 <?php
 /* @var $this UserController */
 /* @var $model User */
@@ -8,7 +9,6 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	//array('label'=>'List User', 'url'=>array('index')),
 	array('label'=>'创建用户', 'url'=>array('create')),
 );
 

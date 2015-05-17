@@ -13,7 +13,7 @@
  * CCaptchaAction renders a CAPTCHA image.
  *
  * CCaptchaAction is used together with {@link CCaptcha} and {@link CCaptchaValidator}
- * to provide the {@link http://en.wikipedia.org/wiki/Captcha CAPTCHA} feature.
+ * to provide the {@link http://en.wikipedia.org/wiki/Captcha CAPTCHA} feature. 
  *
  * You must configure properties of CCaptchaAction to customize the appearance of
  * the generated image.
@@ -87,7 +87,7 @@ class CCaptchaAction extends CAction
 	 * in order to decrease or increase the readability of the captcha.
 	 * @since 1.1.7
 	 **/
-	public $offset = -2;
+	public $offset=6;
 	/**
 	 * @var string the TrueType font file. Defaults to SpicyRice.ttf which is provided with the Yii release.
 	 * Note that non-free Duality.ttf has been changed to open/free SpicyRice.ttf since 1.1.14.
@@ -127,7 +127,7 @@ class CCaptchaAction extends CAction
 			));
 		}
 		else
-			$this->renderImage($this->getVerifyCode());
+			$this->renderImage($this->getVerifyCode(true));
 		Yii::app()->end();
 	}
 
@@ -178,7 +178,10 @@ class CCaptchaAction extends CAction
 		$session = Yii::app()->session;
 		$session->open();
 		$name = $this->getSessionKey() . 'count';
-		$session[$name] = $session[$name] + 1;
+	 	if(!Yii::app()->request->isAjaxRequest){
+            $session[$name] = $session[$name] + 1;
+        }
+		//$session[$name] = $session[$name] + 1;
 		if($session[$name] > $this->testLimit && $this->testLimit > 0)
 			$this->getVerifyCode(true);
 		return $valid;
@@ -218,7 +221,8 @@ class CCaptchaAction extends CAction
 	 */
 	protected function getSessionKey()
 	{
-		return self::SESSION_VAR_PREFIX . Yii::app()->getId() . '.' . $this->getController()->getUniqueId() . '.' . $this->getId();
+		//return self::SESSION_VAR_PREFIX . Yii::app()->getId() . '.' . $this->getController()->getUniqueId() . '.' . $this->getId();
+		return 'captcha';
 	}
 
 	/**

@@ -862,7 +862,7 @@ class CController extends CBaseController
 	 * @see processOutput
 	 * @see render
 	 */
-	public function renderPartial($view,$data=null,$return=false,$processOutput=false)
+	public function renderPartial($view,$data=null,$return=false,$processOutput=true)
 	{
 		if(($viewFile=$this->getViewFile($view))!==false)
 		{

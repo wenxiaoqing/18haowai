@@ -29,8 +29,8 @@ class User extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('username, password, salt, email, profile', 'required'),
-			array('username, password, salt, email', 'length', 'max'=>128),
+			array('username, password', 'required'),
+			array('username, password', 'length', 'max'=>128),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('id, username, password, salt, email, profile', 'safe', 'on'=>'search'),
@@ -109,4 +109,13 @@ class User extends CActiveRecord
 	{
 		return parent::model($className);
 	}
+	
+	 public function validatePassword($password)
+	 {
+	 	 return $this->hashPassword($password)===$this->password;
+	 }
+
+	 public function hashPassword($password){
+	 	return md5($password);
+	 }
 }

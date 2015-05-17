@@ -65,7 +65,7 @@ class CUserIdentity extends CBaseUserIdentity
 	 */
 	public function getId()
 	{
-		return $this->username;
+		return $this->id;
 	}
 
 	/**
